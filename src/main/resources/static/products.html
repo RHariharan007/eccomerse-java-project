@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BAT-CART | Products</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="navbar"></div>
+
+<main class="container page">
+  <div class="products-heading">
+    <div>
+      <span class="eyebrow dark">BAT-CART STORE</span>
+      <h1>All Products</h1>
+      <p class="muted">20 hand-picked products across six categories.</p>
+    </div>
+    <div id="result-count" class="result-count"></div>
+  </div>
+
+  <section class="filter-panel">
+    <div class="search-wrap">
+      <span>⌕</span>
+      <input id="search-input" type="search" autocomplete="off"
+             placeholder="Search by product name, category, brand...">
+      <button id="clear-search" type="button" class="icon-btn" title="Clear search">×</button>
+    </div>
+
+    <div class="filter-row">
+      <div>
+        <label for="category-filter">Category</label>
+        <select id="category-filter">
+          <option value="">All categories</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="brand-filter">Brand</label>
+        <select id="brand-filter">
+          <option value="">All brands</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="price-filter">Price</label>
+        <select id="price-filter">
+          <option value="">Any price</option>
+          <option value="0-999">Under ₹1,000</option>
+          <option value="1000-2499">₹1,000 – ₹2,499</option>
+          <option value="2500-4999">₹2,500 – ₹4,999</option>
+          <option value="5000-9999">₹5,000 – ₹9,999</option>
+          <option value="10000-999999">₹10,000+</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="sort-select">Sort by</label>
+        <select id="sort-select">
+          <option value="featured">Featured</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="name-az">Name: A → Z</option>
+          <option value="name-za">Name: Z → A</option>
+          <option value="rating">Customer Rating</option>
+          <option value="newest">Newest First</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="filter-bottom">
+      <div id="active-filters" class="active-filters"></div>
+      <button id="reset-filters" class="text-btn" type="button">Reset all filters</button>
+    </div>
+  </section>
+
+  <div id="products-grid" class="product-grid product-grid-large"></div>
+  <div id="products-empty" class="empty hidden">
+    <div class="empty-icon">🔎</div>
+    <h2>No products found</h2>
+    <p>Try another search or clear your filters.</p>
+    <button class="btn" onclick="resetProductFilters()">Show all products</button>
+  </div>
+</main>
+
+<div id="footer"></div>
+<script src="commons.js"></script>
+<script src="products.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BAT-CART | Checkout</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="navbar"></div>
+<main class="container page">
+  <div class="products-heading"><div><span class="eyebrow dark">SECURE CHECKOUT</span><h1>Checkout</h1></div></div>
+  <div class="checkout-layout">
+    <section class="card">
+      <h2>Delivery Details</h2>
+      <form id="checkout-form">
+        <div class="form-grid">
+          <label>Full Name<input id="name" required></label>
+          <label>Phone<input id="phone" inputmode="numeric" required></label>
+          <label class="full">Address<textarea id="address" required></textarea></label>
+          <label>City<input id="city" required></label>
+          <label>State<input id="state" required></label>
+          <label>PIN Code<input id="pincode" inputmode="numeric" pattern="[0-9]{6}" required></label>
+        </div>
+        <h2>Payment</h2>
+        <label class="payment-option"><input type="radio" name="payment" value="COD" checked> <span><strong>Cash on Delivery</strong><small>Pay when your order arrives</small></span></label>
+        <label class="payment-option"><input type="radio" name="payment" value="ONLINE"> <span><strong>Online Payment</strong><small>Demo option — connect your gateway later</small></span></label>
+        <button class="btn full-btn" type="submit">Place Order</button>
+      </form>
+    </section>
+    <aside id="checkout-summary" class="card"></aside>
+  </div>
+</main>
+<div id="footer"></div>
+<script src="commons.js"></script>
+<script src="checkout.js"></script>
+</body>
+</html>

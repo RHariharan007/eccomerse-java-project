@@ -1,0 +1,3 @@
+document.addEventListener("DOMContentLoaded",()=>{
+ document.getElementById("reset-form").addEventListener("submit",e=>{e.preventDefault();const p=document.getElementById("reset-password").value,c=document.getElementById("reset-confirm").value;if(p!==c){alert("Passwords do not match.");return;}const email=localStorage.getItem("resetEmail"),users=JSON.parse(localStorage.getItem("users")||"[]"),u=users.find(x=>x.email===email);if(!u){alert("Reset session expired.");location.href="forgot-password.html";return;}u.password=p;localStorage.setItem("users",JSON.stringify(users));localStorage.removeItem("resetEmail");alert("Password reset successfully.");location.href="login.html";});
+});

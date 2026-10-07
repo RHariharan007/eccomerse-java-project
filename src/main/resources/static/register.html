@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BAT-CART | Register</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="navbar"></div>
+<main class="container page center-page">
+<form id="register-form" class="card auth-card">
+  <span class="eyebrow dark">JOIN BAT-CART</span><h1>Create Account</h1>
+  <label>Name<input id="register-name" required></label>
+  <label>Email<input id="register-email" type="email" required></label>
+  <label>Password<input id="register-password" type="password" minlength="6" required></label>
+  <label>Confirm Password<input id="register-confirm" type="password" minlength="6" required></label>
+  <button class="btn full-btn" type="submit">Register</button>
+  <p>Already have an account? <a href="login.html">Login</a></p>
+</form>
+</main>
+<div id="footer"></div>
+<script src="commons.js"></script>
+<script src="register.js"></script>
+</body>
+</html>

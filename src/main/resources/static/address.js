@@ -1,0 +1,4 @@
+document.addEventListener("DOMContentLoaded",()=>{
+ const a=JSON.parse(localStorage.getItem("address")||"null");if(a){for(const [id,key] of [["address-name","name"],["address-phone","phone"],["address-line","address"],["address-city","city"],["address-state","state"],["address-pincode","pincode"]])document.getElementById(id).value=a[key]||"";}
+ document.getElementById("address-form").addEventListener("submit",e=>{e.preventDefault();const a={name:document.getElementById("address-name").value,phone:document.getElementById("address-phone").value,address:document.getElementById("address-line").value,city:document.getElementById("address-city").value,state:document.getElementById("address-state").value,pincode:document.getElementById("address-pincode").value};localStorage.setItem("address",JSON.stringify(a));toast("Address saved");});
+});

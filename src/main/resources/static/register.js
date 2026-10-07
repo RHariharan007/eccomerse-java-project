@@ -1,0 +1,3 @@
+document.addEventListener("DOMContentLoaded",()=>{
+ document.getElementById("register-form").addEventListener("submit",e=>{e.preventDefault();const name=document.getElementById("register-name").value.trim(),email=document.getElementById("register-email").value.trim(),password=document.getElementById("register-password").value,confirm=document.getElementById("register-confirm").value;if(password!==confirm){alert("Passwords do not match.");return;}const users=JSON.parse(localStorage.getItem("users")||"[]");if(users.some(x=>x.email===email)){alert("Email already registered.");return;}users.push({name,email,password,phone:""});localStorage.setItem("users",JSON.stringify(users));alert("Registration successful.");location.href="login.html";});
+});

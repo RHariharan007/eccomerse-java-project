@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BAT-CART | Address</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="navbar"></div>
+<main class="container page">
+  <div class="products-heading"><div><span class="eyebrow dark">DELIVERY</span><h1>Address</h1></div></div>
+  <form id="address-form" class="card narrow">
+    <label>Full Name<input id="address-name" required></label>
+    <label>Phone<input id="address-phone" required></label>
+    <label>Address<textarea id="address-line" required></textarea></label>
+    <label>City<input id="address-city" required></label>
+    <label>State<input id="address-state" required></label>
+    <label>PIN Code<input id="address-pincode" pattern="[0-9]{6}" required></label>
+    <button class="btn" type="submit">Save Address</button>
+  </form>
+</main>
+<div id="footer"></div>
+<script src="commons.js"></script>
+<script src="address.js"></script>
+</body>
+</html>
